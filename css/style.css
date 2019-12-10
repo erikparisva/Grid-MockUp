@@ -16,12 +16,8 @@ body {
 h1 {
     text-transform: uppercase;
     text-align: center;
-    vertical-align: middle;
-    position: relative;
-    line-height: 65vh;  
-    margin-top: 200px;
     color: var(--redish);
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 0;
 }
 ul {
@@ -58,14 +54,16 @@ li a:hover {
     linear-gradient(to right bottom, rgba(240, 208, 187, 0.418), rgba(9, 0, 10, 0.2)),
     url('../img/mainbackground.gif');
     height: 75vh;
+    display: grid;
     width: auto;
     background-size: cover;
-    background-position-y: 65%;  
+    background-position-y: 65%;
+    align-items: center;
+    align-content: center;
 }
 .main-header p {
     text-align: center;
     color: var(--white);
-    position: relative;
     bottom: 40%;
 }
 @media (max-width: 758px) {
@@ -82,7 +80,278 @@ li a:hover {
         text-align: center;
     }
 }
+.container {
+    height: 30%;
+    text-align: center;
+}
+.skills-container{
+    width: 75%;
+    height: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
+.skills{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    width: 100%;
+    height: 50%;
+    font-size: 20px;
+}
+.skill{
+    background: rgb(224, 224, 224);
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+}
+.skillmain {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+}
+.skillmain h2 {
+    color: var(--redish);
+}
+.skill h4 {
+    color: var(--redish);
+}
+.skills :hover{
+    background-color: var(--dark-gray);
+}
 
+@media (max-width: 568px) {
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+.video-container {
+    background-image:
+    linear-gradient(to right bottom, rgba(240, 208, 187, 0.418), rgba(9, 0, 10, 0.2)),
+    url('../img/backgroundchillin.gif');
+    height: 75vh;
+    display: grid;
+    width: auto;
+    background-size: cover;
+    background-position-y: 65%;  
+    align-items: center;
+    align-content: center;
+}
+.video-container h1 {
+    line-height: 5vh;
+}
+.video-container p {
+    text-align: center;
+    color: var(--white);
+    top: 40%;
+    font-size: 20px;
+}
+.works p {
+    text-align: center;
+    color: var(--black);
+    bottom: 40%;
+    margin:0 auto;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.works h1 {
+    line-height: 10vh;
+}
+.navigationbar-works {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.navigation-wrapper-works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 55%;
+    margin: 0 auto;    
+}
+.navigation-wrapper-works a{
+    color: var(--cyan-gray);
+    font-size: 20px;
+}
+@media (max-width: 568px){
+    .works-navigationbar{
+        width: 100%;
+        text-align: center;
+    }
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: 
+    "bigImg img1 img2"
+    "bigImg img3 img4";
+    gap: 2vw;
+    width: max-content;
+    margin: 25px auto;
+}
+.galleryImg {
+    width: 14vw;
+    height: 14vw;
+}
+.bigImg {
+    width: 30vw;
+    height: 30vw;
+    grid-area: bigImg;
+}
+.img1 {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+}
+.img4 {
+    grid-area: img4;
+}
+.about-us-container {
+    background-image:
+    linear-gradient(to right bottom, rgba(199, 107, 45, 0.418), rgba(9, 0, 10, 0.486)),
+    url('../img/backgroundvibe.gif');
+    height: 75vh;
+    display: grid;
+    width: auto;
+    background-size: cover;
+    background-position-y: 65%;  
+    align-items: center;
+    align-content: center;
+}
+.about-us-container p{
+    text-align: center;
+    color: var(--black);
+    bottom: 40%;
+    margin:0 auto;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.indicator {
+    height: 6px;
+    width: 100%;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(236,211,0,1) 50%, rgba(0,255,5,1) 100%);
+    margin: 10px auto 40px auto;
+    position: relative;
+}
+.indicator::after {
+    content: "▏  ";
+    position: absolute;
+    height: 15px;
+    top: -8px;
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+}
+.indicator1::after {
+    width: 20px;
+    left: 480px;
+}
+.indicator2::after {
+    width: 10px;
+    left: 490px;
+}
+.indicator3::after {
+    width: -10px;
+    left: 280px;
+}
+.indicator4::after {
+    left: 265px;
+    width: 235px;
+}
+.indicator5::after {
+    left: 420px;
+    width: 80px;
+}
+.statGradient {
+    display: block;
+    width: 500px;
+    margin: 25px auto 0 auto;
+}
+.indicatorName {
+    font-weight: 700;
+}
+span.right {
+    float: right;
+}
+.statistic-container{
+    text-align: center;
+    font-size: 20px;
+}
+.statistic-container h1{
+    line-height: 10vh;
+}
+
+@media (max-width: 568px){
+    .statistic{
+        display: none;
+    }
+}
+.contact-container {
+    width: 100%;
+    display: grid;
+    text-align: center;
+    width: auto;
+    background-size: cover;
+    background-position-y: 65%;  
+    background-color: var(--dark-gray);
+}
+.contact-container a{
+    color: var(--redish);
+    font-size: 10px;
+    background-color: var(--darkGray);
+}
+.contacts {
+    background-color: var(--darkGray);
+    height: 300px;
+}
+.contacts-info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: max-content;
+    margin: 30px auto 0 auto;
+}
+.contact-item {
+    width: 300px;
+}
+.contact-item img {
+    height: 40px;
+    float: left;
+    padding: 5px;
+}
+.contact-item p {
+    color:var(--redish);
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+.copyright-container {
+    background-color: var(--dark-gray);
+    color: var(--redish);
+    text-align: center;
+    padding: 10px 0px;
+    font-weight: 700;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+@media(max-width: 568px) {
+    .contacts-Info {
+        grid-template-columns: 1fr;
+    }
+}
 @font-face {
     font-family: Pixel;
     src: url(../fonts/VCR_OSD_MONO_1.001.ttf)
